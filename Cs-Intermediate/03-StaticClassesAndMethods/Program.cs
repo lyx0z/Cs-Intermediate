@@ -4,16 +4,10 @@ public static class StaticClassesAndMethods
 {
     public static void Main(String[] args)
     {
-        var x = 5;
-        var y = 0;
-        try
-        {
-            var result = Calculator.Division(x, y);
-            Console.WriteLine(result);
-        }
-        catch (Exception dividebyzero)
-        {
-            Console.WriteLine(dividebyzero.Message);
-        }
+        var number1 = 5;
+        var number2 = 0;
+        // var result = Calculator.Division(number1, number2);
+        var result2 = Calculator.Sum(number1, number2);
+        Console.WriteLine(result2);
     }
 }
