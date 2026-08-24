@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="02-MultidimensionalArrays/02-MultidimensionalArrays.csproj" />
   <Project Path="03-StaticClassesAndMethods/03-StaticClassesAndMethods.csproj" />
+  <Project Path="04-ExceptionHandling/04-ExceptionHandling.csproj" />
 </Solution>
