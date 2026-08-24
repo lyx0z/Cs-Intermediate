@@ -5,7 +5,15 @@ public static class StaticClassesAndMethods
     public static void Main(String[] args)
     {
         var x = 5;
-        var y = 10;
-        Calculator.Sum(x, y);
+        var y = 0;
+        try
+        {
+            var result = Calculator.Division(x, y);
+            Console.WriteLine(result);
+        }
+        catch (Exception dividebyzero)
+        {
+            Console.WriteLine(dividebyzero.Message);
+        }
     }
 }
