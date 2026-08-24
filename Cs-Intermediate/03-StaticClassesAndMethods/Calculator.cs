@@ -1,7 +1,7 @@
 ﻿namespace _03_StaticClassesAndMethods;
 
 //Schreibe eine Klasse, die alle Grundfunktionalität eines Taschenrechners anbieten soll. Die Klasse und ihre Methoden soll statisch sein und entsprechend aufgerufen werden. Nutze Exceptions wo dies sinnvoll ist.
-public class Calculator
+public static class Calculator
 {
     public static int Sum(int addend1, int addend2)
     {
