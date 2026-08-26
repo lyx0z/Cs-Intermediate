@@ -4,22 +4,6 @@ namespace _04_ExceptionHandling;
 
 public static class ExceptionHandling
 {
-    /*public static void Main(String[] args)
-    {
-        Console.WriteLine("Input your Number");
-        var x = int.TryParse(Console.ReadLine(), out var userNumber);
-        if (!x)
-        {
-            throw new Exception("cannot use a string");
-        }
-
-        const int maxValue = Int32.MaxValue;
-
-        // Calculations.IsPositive(userNumber);
-        var userNumber2 = 10;
-        var result = Calculations.AddNums(userNumber, userNumber2);
-        Console.WriteLine(result);
-    }*/
     public static void Main(String[] args)
     {
         Console.WriteLine("Input your Number");
