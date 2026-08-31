@@ -3,4 +3,5 @@
   <Project Path="03-StaticClassesAndMethods/03-StaticClassesAndMethods.csproj" />
   <Project Path="04-ExceptionHandling/04-ExceptionHandling.csproj" />
   <Project Path="06-AdvancedTasks/06-AdvancedTasks.csproj" />
+  <Project Path="Extra-TwoSum/Extra-TwoSum.csproj" />
 </Solution>
