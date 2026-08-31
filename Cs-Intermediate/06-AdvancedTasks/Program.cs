@@ -1,9 +1,12 @@
-﻿namespace _06_AdvancedTasks;
+﻿using _06_AdvancedTasks;
 
-public class AdvancedTasks
+namespace _06_Advancedasks;
+
+public static class AdvancedTasks
 {
     public static void Main(String[] args)
     {
+        var running = true;
         //Erweitere das Programm so, dass es das Array auf die Konsole schreiben kann, Werte welche false sind, sollen Leerzeichen sein, true sollen etwas schreiben, z.B. ein 'x'
         var matrix = new bool[6, 9]
         {
@@ -14,7 +17,44 @@ public class AdvancedTasks
             { true, true, true, true, true, true, true, true, true },
             { false, false, false, false, true, false, false, false, false },
         };
-        var draw = new DrawingMaker();
-        draw.Draw(matrix);
+        //DrawingMaker.Draw(matrix);
+        //Erstelle ein Consolenprogramm, welches ein X automatisch über den Bildschirm laufen lässt. +wasd
+        var leftPos = 20;
+        var topPos = 20;
+        while (running)
+        {
+            var key = Console.ReadKey();
+            Console.SetCursorPosition(leftPos, topPos);
+            Console.Write("X");
+            if (key.KeyChar == 'w')
+            {
+                Console.Clear();
+                topPos -= 1;
+                Console.SetCursorPosition(leftPos, topPos);
+                Console.Write("X");
+            }
+            if (key.KeyChar == 'a')
+            {
+                Console.Clear();
+                leftPos -= 1;
+                Console.SetCursorPosition(leftPos, topPos);
+                Console.Write("X");
+            }
+            if (key.KeyChar == 's')
+            {
+                Console.Clear();
+                topPos += 1;
+                Console.SetCursorPosition(leftPos, topPos);
+                Console.Write("X");
+            }
+
+            if (key.KeyChar == 'd')
+            {
+                Console.Clear();
+                leftPos += 1;
+                Console.SetCursorPosition(leftPos, topPos);
+                Console.Write("X");
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 public class DrawingMaker
 {
-    public void Draw(bool[,] matrix)
+    public static void Draw(bool[,] matrix)
     {
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
