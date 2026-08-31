@@ -19,8 +19,8 @@ public static class AdvancedTasks
         };
         //DrawingMaker.Draw(matrix);
         //Erstelle ein Consolenprogramm, welches ein X automatisch über den Bildschirm laufen lässt. +wasd
-        var leftPos = 20;
-        var topPos = 20;
+        var leftPos = 0;
+        var topPos = 0;
         while (running)
         {
             var key = Console.ReadKey();
@@ -30,30 +30,62 @@ public static class AdvancedTasks
             {
                 Console.Clear();
                 topPos -= 1;
-                Console.SetCursorPosition(leftPos, topPos);
-                Console.Write("X");
+                if (topPos < 0)
+                {
+                    Console.SetCursorPosition(leftPos, topPos = 0);
+                    Console.Write("X");
+                }
+                else
+                {
+                    Console.SetCursorPosition(leftPos, topPos);
+                    Console.Write("X");
+                }
             }
             if (key.KeyChar == 'a')
             {
                 Console.Clear();
                 leftPos -= 1;
-                Console.SetCursorPosition(leftPos, topPos);
-                Console.Write("X");
+                if (leftPos < 0)
+                {
+                    Console.SetCursorPosition(leftPos = 0, topPos);
+                    Console.Write("X");
+                }
+                else
+                {
+                    Console.SetCursorPosition(leftPos, topPos);
+                    Console.Write("X");
+                }
             }
             if (key.KeyChar == 's')
             {
                 Console.Clear();
                 topPos += 1;
-                Console.SetCursorPosition(leftPos, topPos);
-                Console.Write("X");
+                if (topPos >= 30)
+                {
+                    Console.SetCursorPosition(leftPos, topPos = 29);
+                    Console.Write("X");
+                }
+                else
+                {
+                    Console.SetCursorPosition(leftPos, topPos);
+                    Console.Write("X");
+                }
             }
 
             if (key.KeyChar == 'd')
             {
                 Console.Clear();
                 leftPos += 1;
-                Console.SetCursorPosition(leftPos, topPos);
-                Console.Write("X");
+                if (leftPos >= 120)
+                {
+                    Console.SetCursorPosition(leftPos = 119, topPos);
+                    Console.Write("X");
+                }
+                else
+                {
+                    Console.SetCursorPosition(leftPos, topPos);
+                    Console.Write("X");
+                }
             }
         }
     }
