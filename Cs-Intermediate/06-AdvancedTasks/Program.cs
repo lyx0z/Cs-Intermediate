@@ -26,65 +26,75 @@ public static class AdvancedTasks
             var key = Console.ReadKey();
             Console.SetCursorPosition(leftPos, topPos);
             Console.Write("X");
-            if (key.KeyChar == 'w')
+            switch (key.KeyChar)
             {
-                Console.Clear();
-                topPos -= 1;
-                if (topPos < 0)
+                case 'w':
                 {
-                    Console.SetCursorPosition(leftPos, topPos = 0);
-                    Console.Write("X");
-                }
-                else
-                {
-                    Console.SetCursorPosition(leftPos, topPos);
-                    Console.Write("X");
-                }
-            }
-            if (key.KeyChar == 'a')
-            {
-                Console.Clear();
-                leftPos -= 1;
-                if (leftPos < 0)
-                {
-                    Console.SetCursorPosition(leftPos = 0, topPos);
-                    Console.Write("X");
-                }
-                else
-                {
-                    Console.SetCursorPosition(leftPos, topPos);
-                    Console.Write("X");
-                }
-            }
-            if (key.KeyChar == 's')
-            {
-                Console.Clear();
-                topPos += 1;
-                if (topPos >= 30)
-                {
-                    Console.SetCursorPosition(leftPos, topPos = 29);
-                    Console.Write("X");
-                }
-                else
-                {
-                    Console.SetCursorPosition(leftPos, topPos);
-                    Console.Write("X");
-                }
-            }
+                    Console.Clear();
+                    topPos -= 1;
+                    if (topPos < 0)
+                    {
+                        Console.SetCursorPosition(leftPos, topPos = 0);
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(leftPos, topPos);
+                    }
 
-            if (key.KeyChar == 'd')
-            {
-                Console.Clear();
-                leftPos += 1;
-                if (leftPos >= 120)
-                {
-                    Console.SetCursorPosition(leftPos = 119, topPos);
                     Console.Write("X");
+
+                    break;
                 }
-                else
+                case 'a':
                 {
-                    Console.SetCursorPosition(leftPos, topPos);
+                    Console.Clear();
+                    leftPos -= 1;
+                    if (leftPos < 0)
+                    {
+                        Console.SetCursorPosition(leftPos = 0, topPos);
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(leftPos, topPos);
+                    }
+
                     Console.Write("X");
+
+                    break;
+                }
+                case 's':
+                {
+                    Console.Clear();
+                    topPos += 1;
+                    if (topPos >= 30)
+                    {
+                        Console.SetCursorPosition(leftPos, topPos = 29);
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(leftPos, topPos);
+                    }
+
+                    Console.Write("X");
+
+                    break;
+                }
+                case 'd':
+                {
+                    Console.Clear();
+                    leftPos += 1;
+                    if (leftPos >= 120)
+                    {
+                        Console.SetCursorPosition(leftPos = 119, topPos);
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(leftPos, topPos);
+                    }
+
+                    Console.Write("X");
+
+                    break;
                 }
             }
         }
